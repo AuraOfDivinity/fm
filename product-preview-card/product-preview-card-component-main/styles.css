@@ -99,7 +99,7 @@ body {
     flex-direction: column;
     margin: 12px;
     width: 350px;
-    height: 750p;
+    height: 750px;
     border-radius: 8px;
     background-color: var(--color-white);
 
@@ -134,7 +134,7 @@ body {
             background-color: var(--color-white);
             border-start-end-radius: 8px;
             border-end-end-radius: 8px;
-            gap: 32px;
+            gap: 32px;  
         }
 
         .product-box-content__type-text{
