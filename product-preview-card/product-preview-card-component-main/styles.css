@@ -119,7 +119,7 @@ body {
             border-start-start-radius: 8px;
             border-start-end-radius: 0px;
             border-end-start-radius: 8px;
-            content: url('./images/image-product-desktop.jpg');
+            height: 456px;
         }
     }
 
