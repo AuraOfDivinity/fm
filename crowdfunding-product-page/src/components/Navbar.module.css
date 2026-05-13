@@ -1,0 +1,22 @@
+.navbar {
+    display: flex;
+    flex-direction: row;
+    margin-inline: 12rem;
+
+    .navbar__list{
+        display: flex;
+        flex: 1;
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        justify-content: flex-end;
+        gap: var(--spacing-400);
+
+        .navbar__item {
+            .navbar__link {
+                color: var(--color-white);
+                text-decoration: none;
+            }
+        }
+    }
+}

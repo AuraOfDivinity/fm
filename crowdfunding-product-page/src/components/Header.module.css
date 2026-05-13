@@ -1,0 +1,13 @@
+
+.header{
+    width: 100vw;
+    .header__image{
+        width: 100vw;
+    }
+
+    .header__navbar{
+        width: 100%;
+        position: absolute;
+        top: var(--spacing-600);
+    }
+}

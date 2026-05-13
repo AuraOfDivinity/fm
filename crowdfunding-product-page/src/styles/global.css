@@ -166,6 +166,9 @@ table {
   --spacing-500: 40px;
   --spacing-600: 48px;
   --spacing-700: 56px;
+
+  /* BORDER RADIUS */
+  --border-radius-default: 8px;
 }
 
 .text-preset-1 {
