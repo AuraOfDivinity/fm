@@ -7,6 +7,7 @@ type TProductPackageProps = {
     description: string;
     seatsLeft: string;
     disabled?: boolean;
+    toggleModal?: () => void;
 };
 
 const ProductPackageCard = ({
@@ -15,6 +16,7 @@ const ProductPackageCard = ({
     description,
     seatsLeft,
     disabled = false,
+    toggleModal,
 }: TProductPackageProps) => {
     return (
         <div
@@ -33,7 +35,7 @@ const ProductPackageCard = ({
                     <span className={`${styles.productPackage__seatCount} text-preset-7-regular`}>left</span>
                 </div>
                 {!disabled ? (
-                    <Button color="green" size="s">
+                    <Button color="green" size="s" onClick={toggleModal}>
                         Select Reward
                     </Button>
                 ) : (

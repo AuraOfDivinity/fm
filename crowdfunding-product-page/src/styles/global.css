@@ -84,12 +84,12 @@ time,
 mark,
 audio,
 video {
-  margin: 0;
-  padding: 0;
-  border: 0;
-  font-size: 100%;
-  font: inherit;
-  vertical-align: baseline;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
 }
 
 /* HTML5 display-role reset for older browsers */
@@ -104,189 +104,189 @@ hgroup,
 menu,
 nav,
 section {
-  display: block;
+    display: block;
 }
 
 body {
-  line-height: 1;
-  font-family: var(--font-main);
-  color: var(--color-gray-950);
-  background-color: var(--color-white);
+    line-height: 1;
+    font-family: var(--font-main);
+    color: var(--color-gray-950);
+    background-color: var(--color-white);
 }
 
 ol,
 ul {
-  list-style: none;
+    list-style: none;
 }
 
 blockquote,
 q {
-  quotes: none;
+    quotes: none;
 }
 
 blockquote::before,
 blockquote::after,
 q::before,
 q::after {
-  content: '';
-  content: none;
+    content: '';
+    content: none;
 }
 
 table {
-  border-collapse: collapse;
-  border-spacing: 0;
+    border-collapse: collapse;
+    border-spacing: 0;
 }
 
 :root {
-  /* COLORS */
-  --color-black: #000000;
-  --color-white: #ffffff;
+    /* COLORS */
+    --color-black: #000000;
+    --color-white: #ffffff;
 
-  --color-gray-950: #2f2f2f;
-  --color-gray-800: #444444;
-  --color-gray-500: #7a7a7a;
-  --color-gray-400: #929292;
-  --color-gray-300: #b1b1b1;
-  --color-gray-200: #d9d9d9;
-  --color-gray-50: #fafafa;
+    --color-gray-950: #2f2f2f;
+    --color-gray-800: #444444;
+    --color-gray-500: #7a7a7a;
+    --color-gray-400: #929292;
+    --color-gray-300: #b1b1b1;
+    --color-gray-200: #d9d9d9;
+    --color-gray-50: #fafafa;
 
-  --color-green-700: #147a73;
-  --color-green-400: #3cb3ab;
-  --color-green-50: #f3f8f8;
+    --color-green-700: #147a73;
+    --color-green-400: #3cb3ab;
+    --color-green-50: #f3f8f8;
 
-  /* FONTS */
-  --font-main: "Commissioner", sans-serif;
+    /* FONTS */
+    --font-main: 'Commissioner', sans-serif;
 
-  /* SPACING */
-  --spacing-0: 0px;
-  --spacing-100: 8px;
-  --spacing-200: 16px;
-  --spacing-300: 24px;
-  --spacing-400: 32px;
-  --spacing-500: 40px;
-  --spacing-600: 48px;
-  --spacing-700: 56px;
+    /* SPACING */
+    --spacing-0: 0px;
+    --spacing-100: 8px;
+    --spacing-200: 16px;
+    --spacing-300: 24px;
+    --spacing-400: 32px;
+    --spacing-500: 40px;
+    --spacing-600: 48px;
+    --spacing-700: 56px;
 
-  /* BORDER RADIUS */
-  --border-radius-default: 8px;
+    /* BORDER RADIUS */
+    --border-radius-default: 8px;
 }
 
 .text-preset-1 {
-  font-family: var(--font-main);
-  font-size: 2rem;
-  font-weight: 700;
-  line-height: 1.25;
-  letter-spacing: 0;
+    font-family: var(--font-main);
+    font-size: 2rem;
+    font-weight: 700;
+    line-height: 1.25;
+    letter-spacing: 0;
 }
 
 .text-preset-2 {
-  font-family: var(--font-main);
-  font-size: 1.75rem;
-  font-weight: 700;
-  line-height: 1.25;
-  letter-spacing: 0;
+    font-family: var(--font-main);
+    font-size: 1.75rem;
+    font-weight: 700;
+    line-height: 1.25;
+    letter-spacing: 0;
 }
 
 .text-preset-3 {
-  font-family: var(--font-main);
-  font-size: 1.5rem;
-  font-weight: 700;
-  line-height: 1.25;
-  letter-spacing: 0;
+    font-family: var(--font-main);
+    font-size: 1.5rem;
+    font-weight: 700;
+    line-height: 1.25;
+    letter-spacing: 0;
 }
 
 .text-preset-4 {
-  font-family: var(--font-main);
-  font-size: 1.25rem;
-  font-weight: 700;
-  line-height: 1.25;
-  letter-spacing: 0;
+    font-family: var(--font-main);
+    font-size: 1.25rem;
+    font-weight: 700;
+    line-height: 1.25;
+    letter-spacing: 0;
 }
 
 .text-preset-5-bold {
-  font-family: var(--font-main);
-  font-size: 1.25rem;
-  font-weight: 700;
-  line-height: 1.25;
-  letter-spacing: 0;
+    font-family: var(--font-main);
+    font-size: 1.25rem;
+    font-weight: 700;
+    line-height: 1.25;
+    letter-spacing: 0;
 }
 
 .text-preset-5-medium {
-  font-family: var(--font-main);
-  font-size: 1rem;
-  font-weight: 500;
-  line-height: 1.25;
-  letter-spacing: 0;
+    font-family: var(--font-main);
+    font-size: 1rem;
+    font-weight: 500;
+    line-height: 1.25;
+    letter-spacing: 0;
 }
 
 .text-preset-6-bold {
-  font-family: var(--font-main);
-  font-size: 1rem;
-  font-weight: 700;
-  line-height: 1.25;
-  letter-spacing: 0;
+    font-family: var(--font-main);
+    font-size: 1rem;
+    font-weight: 700;
+    line-height: 1.25;
+    letter-spacing: 0;
 }
 
 .text-preset-6-medium {
-  font-family: var(--font-main);
-  font-size: 1rem;
-  font-weight: 500;
-  line-height: 1.25;
-  letter-spacing: 0;
+    font-family: var(--font-main);
+    font-size: 1rem;
+    font-weight: 500;
+    line-height: 1.25;
+    letter-spacing: 0;
 }
 
 .text-preset-6-regular {
-  font-family: var(--font-main);
-  font-size: 1rem;
-  font-weight: 400;
-  line-height: 1.5;
-  letter-spacing: 0;
+    font-family: var(--font-main);
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    letter-spacing: 0;
 }
 
 .text-preset-7-medium {
-  font-family: var(--font-main);
-  font-size: 0.938rem;
-  font-weight: 500;
-  line-height: 1.25;
-  letter-spacing: 0;
+    font-family: var(--font-main);
+    font-size: 0.938rem;
+    font-weight: 500;
+    line-height: 1.25;
+    letter-spacing: 0;
 }
 
 .text-preset-7-regular {
-  font-family: var(--font-main);
-  font-size: 0.938rem;
-  font-weight: 400;
-  line-height: 1.5;
-  letter-spacing: 0;
+    font-family: var(--font-main);
+    font-size: 0.938rem;
+    font-weight: 400;
+    line-height: 1.5;
+    letter-spacing: 0;
 }
 
 .text-preset-8-bold {
-  font-family: var(--font-main);
-  font-size: 0.875rem;
-  font-weight: 700;
-  line-height: 1.25;
-  letter-spacing: 0;
+    font-family: var(--font-main);
+    font-size: 0.875rem;
+    font-weight: 700;
+    line-height: 1.25;
+    letter-spacing: 0;
 }
 
 .text-preset-8-medium {
-  font-family: var(--font-main);
-  font-size: 0.875rem;
-  font-weight: 500;
-  line-height: 1.25;
-  letter-spacing: 0;
+    font-family: var(--font-main);
+    font-size: 0.875rem;
+    font-weight: 500;
+    line-height: 1.25;
+    letter-spacing: 0;
 }
 
 .text-preset-8-regular {
-  font-family: var(--font-main);
-  font-size: 0.875rem;
-  font-weight: 400;
-  line-height: 1.5;
-  letter-spacing: 0;
+    font-family: var(--font-main);
+    font-size: 0.875rem;
+    font-weight: 400;
+    line-height: 1.5;
+    letter-spacing: 0;
 }
 
 .text-preset-9-medium {
-  font-family: var(--font-main);
-  font-size: 0.813rem;
-  font-weight: 500;
-  line-height: 1.25;
-  letter-spacing: 0;
+    font-family: var(--font-main);
+    font-size: 0.813rem;
+    font-weight: 500;
+    line-height: 1.25;
+    letter-spacing: 0;
 }

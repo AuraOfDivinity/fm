@@ -1,0 +1,58 @@
+.modalCard__wrapper {
+    width: 634px;
+    height: 157px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 8px;
+    border: 1px solid var(--color-gray-200);
+
+    .modalCard__innerWrapper {
+        display: flex;
+        flex-direction: row;
+        gap: var(--spacing-300);
+        align-items: flex-start;
+        width: 578px;
+
+        .modalCard__content {
+            display: flex;
+            flex-direction: column;
+            gap: var(--spacing-100);
+
+            .modalCard__header {
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+
+                .modalCard__titleWrapper {
+                    display: flex;
+                    flex-direction: row;
+                    gap: var(--spacing-200);
+
+                    .modalCard__subTitle {
+                        color: var(--color-green-400);
+                    }
+                }
+
+                .modalCard__seats {
+                    display: flex;
+                    gap: var(--spacing-100);
+
+                    .modalCard__seatLeft {
+                        display: flex;
+                        align-items: center;
+                        color: var(--color-gray-500);
+                    }
+                }
+            }
+
+            .modalCard__description {
+                color: var(--color-gray-500);
+            }
+        }
+    }
+}
+
+.modalCard__disabled {
+    opacity: 0.3;
+}

@@ -1,0 +1,22 @@
+.modalRenderer {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-400);
+    padding-block-end: var(--spacing-400);
+
+    .text {
+        display: flex;
+        flex-direction: column;
+        gap: var(--spacing-200);
+
+        .modalRenderer__subHeading {
+            color: var(--color-gray-500);
+        }
+    }
+
+    .modalRenderer__cards {
+        display: flex;
+        flex-direction: column;
+        gap: var(--spacing-300);
+    }
+}
