@@ -12,9 +12,7 @@
         position: fixed;
         background: var(--color-white);
         padding-inline: var(--spacing-600);
-        /* width: 45.625rem; */
         height: auto;
-        min-height: 500px;
         max-height: 90vh;
         overflow-y: scroll;
         top: 50%;
@@ -32,6 +30,10 @@
             align-items: center;
             flex-direction: row;
             margin-block-start: var(--spacing-400);
+
+            .modal__close {
+                cursor: pointer;
+            }
         }
     }
 }

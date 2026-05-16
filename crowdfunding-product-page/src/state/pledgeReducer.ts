@@ -1,5 +1,5 @@
-import React, { createContext, useReducer } from 'react';
-import { defaultPledgeState, EModalState, TPledgeState } from './metadata';
+import { ModalState } from '../components/modals/ModalCard';
+import { EModalState, TPledgeState } from './metadata';
 
 export enum ActionType {
     Select = 'SELECT',
@@ -25,9 +25,9 @@ export const pledgeReducer = (state: TPledgeState, action: TAction): TPledgeStat
                 ...state,
                 pledges: state.pledges.map((pledge) => {
                     if (pledge.id === action.id) {
-                        return { ...pledge, selected: true };
+                        return { ...pledge, state: ModalState.Active };
                     } else {
-                        return { ...pledge, selected: false };
+                        return { ...pledge, state: ModalState.Default };
                     }
                 }),
             };
@@ -38,7 +38,7 @@ export const pledgeReducer = (state: TPledgeState, action: TAction): TPledgeStat
                     if (pledge.id === action.id) {
                         return {
                             ...pledge,
-                            selected: false,
+                            state: ModalState.Default,
                         };
                     } else {
                         return pledge;

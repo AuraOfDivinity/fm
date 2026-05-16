@@ -1,4 +1,6 @@
-import RadioButton from '../base/RadioButton';
+import { usePledgeDispatch } from '../../hooks/usePledgeDispatch';
+import { ActionType } from '../../state/pledgeReducer';
+import CheckBox from '../base/CheckBox';
 import styles from './ModalCard.module.css';
 
 export enum ModalState {
@@ -8,6 +10,7 @@ export enum ModalState {
 }
 
 type TModalCardProps = {
+    id: number;
     title: string;
     seatCount?: number;
     subTitle?: string;
@@ -15,12 +18,31 @@ type TModalCardProps = {
     state: ModalState;
 };
 
-const ModalCard = ({ title, seatCount, subTitle, description, state }: TModalCardProps) => {
+const ModalCard = ({ id, title, seatCount, subTitle, description, state }: TModalCardProps) => {
+    const dispatch = usePledgeDispatch();
+
+    const handleOnChange = () => {
+        console.log('changing');
+        if (state === ModalState.Active) {
+            dispatch({
+                type: ActionType.Unselect,
+                id,
+            });
+        } else {
+            dispatch({
+                type: ActionType.Select,
+                id,
+            });
+        }
+    };
+
     return (
-        <div className={`${styles.modalCard__wrapper} ${state === ModalState.Inactive && styles.modalCard__disabled}`}>
+        <div
+            className={`${styles.modalCard__wrapper} ${state === ModalState.Inactive && styles.modalCard__disabled} ${state === ModalState.Active && styles.modalCard__active}`}
+        >
             <div className={styles.modalCard__innerWrapper}>
                 <div className={`${styles.modalCard__radio} `}>
-                    <RadioButton />
+                    <CheckBox checked={state === ModalState.Active} onChange={handleOnChange} />
                 </div>
                 <div className={styles.modalCard__content}>
                     <div className={`${styles.modalCard__header}`}>

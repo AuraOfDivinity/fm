@@ -1,12 +1,10 @@
-import { useState } from 'react';
 import ModalCard from './ModalCard';
 import styles from './ModalRenderer.module.css';
-import { PledgeItem } from '../../state/metadata';
 
-import { defaultPledgeState } from '../../state/metadata';
+import { usePledgeState } from '../../hooks/usePledgeContext';
 
 const ModalRenderer = () => {
-    const [pledges, setPledges] = useState<PledgeItem[]>(defaultPledgeState.pledges);
+    const state = usePledgeState();
 
     return (
         <div className={styles.modalRenderer}>
@@ -17,9 +15,10 @@ const ModalRenderer = () => {
                 </div>
             </div>
             <div className={styles.modalRenderer__cards}>
-                {pledges.map((pledge) => {
+                {state.pledges.map((pledge) => {
                     return (
                         <ModalCard
+                            id={pledge.id}
                             title={pledge.title}
                             subTitle={pledge.subTitle}
                             description={pledge.description}

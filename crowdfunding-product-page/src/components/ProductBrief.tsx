@@ -1,7 +1,17 @@
+import { usePledgeDispatch } from '../hooks/usePledgeDispatch';
+import { ActionType } from '../state/pledgeReducer';
 import styles from './ProductBrief.module.css';
 import ProductPackages from './ProductPackages';
 
 const ProductBrief = () => {
+    const dispatch = usePledgeDispatch();
+
+    const onBackClick = () => {
+        dispatch({
+            type: ActionType.ToggleModal,
+        });
+    };
+
     return (
         <>
             <div className={styles.productBrief__wrapper}>
@@ -12,7 +22,9 @@ const ProductBrief = () => {
                         A beautiful & handcrafted monitor stand to reduce neck and eye strain.
                     </p>
                     <div className={styles.productBrief__ctaWrapper}>
-                        <button className={`${styles.productBrief__back} text-preset-6-bold`}>Back this project</button>
+                        <button className={`${styles.productBrief__back} text-preset-6-bold`} onClick={onBackClick}>
+                            Back this project
+                        </button>
                         <button className={styles.productBrief__bookmark}>
                             <img
                                 className={styles.productBrief__bookmarkIcon}

@@ -14,7 +14,12 @@ const Modal = ({ open, onClose, children }: TModalProps) => {
             <div className={`${styles.modal}`}>
                 <div className={styles.modal__body}>
                     <div className={styles.modal__head}>
-                        <img src="/public/images/icon-close-modal.svg" alt="close button" onClick={onClose} />
+                        <img
+                            src="/public/images/icon-close-modal.svg"
+                            alt="close button"
+                            onClick={onClose}
+                            className={styles.modal__close}
+                        />
                     </div>
                     {children}
                 </div>
