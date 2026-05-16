@@ -1,0 +1,79 @@
+import React, { createContext, useReducer } from 'react';
+import { defaultPledgeState, EModalState, TPledgeState } from './metadata';
+
+export enum ActionType {
+    Select = 'SELECT',
+    Pledge = 'PLEDGE',
+    Unselect = 'UNSELECT',
+    ToggleModal = 'TOGGLEMODAL',
+    Proceed = 'PROCEED',
+    ResetModal = 'RESETMODAL',
+}
+
+export type TAction =
+    | { type: ActionType.Select; id: number }
+    | { type: ActionType.Pledge; amount: number; id: number }
+    | { type: ActionType.Unselect; id: number }
+    | { type: ActionType.ToggleModal }
+    | { type: ActionType.Proceed }
+    | { type: ActionType.ResetModal };
+
+export const pledgeReducer = (state: TPledgeState, action: TAction): TPledgeState => {
+    switch (action.type) {
+        case ActionType.Select:
+            return {
+                ...state,
+                pledges: state.pledges.map((pledge) => {
+                    if (pledge.id === action.id) {
+                        return { ...pledge, selected: true };
+                    } else {
+                        return { ...pledge, selected: false };
+                    }
+                }),
+            };
+        case ActionType.Unselect:
+            return {
+                ...state,
+                pledges: state.pledges.map((pledge) => {
+                    if (pledge.id === action.id) {
+                        return {
+                            ...pledge,
+                            selected: false,
+                        };
+                    } else {
+                        return pledge;
+                    }
+                }),
+            };
+        case ActionType.Pledge:
+            return {
+                ...state,
+                pledges: state.pledges.map((pledge) => {
+                    if (pledge.id === action.id) {
+                        return {
+                            ...pledge,
+                            pledgeAmount: action.amount,
+                        };
+                    } else return pledge;
+                }),
+            };
+        case ActionType.ToggleModal:
+            return {
+                ...state,
+                isModalOpen: !state.isModalOpen,
+            };
+        case ActionType.Proceed:
+            return {
+                ...state,
+                modalState: EModalState.Confirming,
+            };
+        case ActionType.ResetModal:
+            return {
+                ...state,
+                modalState: EModalState.Pledging,
+                isModalOpen: false,
+            };
+        default:
+            return state;
+    }
+};

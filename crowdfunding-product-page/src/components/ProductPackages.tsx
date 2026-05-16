@@ -1,15 +1,19 @@
+import { usePledgeState } from '../hooks/usePledgeContext';
+import { usePledgeDispatch } from '../hooks/usePledgeDispatch';
+import { ActionType } from '../state/pledgeReducer';
 import Modal from './base/Modal';
 import ModalRenderer from './modals/ModalRenderer';
 import ProductPackageCard from './ProductPackageCard';
 import styles from './ProductPackages.module.css';
 
-import { useState } from 'react';
-
 const ProductPackages = () => {
-    const [showModal, setShowModal] = useState<boolean>(true);
+    const state = usePledgeState();
+    const dispatch = usePledgeDispatch();
 
     const handleToggleModal = () => {
-        setShowModal((prevShowModal) => !prevShowModal);
+        dispatch({
+            type: ActionType.ToggleModal,
+        });
     };
 
     return (
@@ -55,7 +59,7 @@ const ProductPackages = () => {
                     />
                 </div>
             </div>
-            <Modal open={showModal} onClose={handleToggleModal}>
+            <Modal open={state.isModalOpen} onClose={handleToggleModal}>
                 <ModalRenderer />
             </Modal>
         </>
