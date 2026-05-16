@@ -26,6 +26,8 @@ export const pledgeReducer = (state: TPledgeState, action: TAction): TPledgeStat
                 pledges: state.pledges.map((pledge) => {
                     if (pledge.id === action.id) {
                         return { ...pledge, state: ModalState.Active };
+                    } else if (pledge.state === ModalState.Inactive) {
+                        return pledge;
                     } else {
                         return { ...pledge, state: ModalState.Default };
                     }

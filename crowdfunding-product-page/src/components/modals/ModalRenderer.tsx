@@ -18,6 +18,7 @@ const ModalRenderer = () => {
                 {state.pledges.map((pledge) => {
                     return (
                         <ModalCard
+                            key={pledge.id}
                             id={pledge.id}
                             title={pledge.title}
                             subTitle={pledge.subTitle}
