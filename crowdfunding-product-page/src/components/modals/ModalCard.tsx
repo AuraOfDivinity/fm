@@ -22,7 +22,6 @@ const ModalCard = ({ id, title, seatCount, subTitle, description, state }: TModa
     const dispatch = usePledgeDispatch();
 
     const handleOnChange = () => {
-        console.log('changing');
         if (state === ModalState.Active) {
             dispatch({
                 type: ActionType.Unselect,
