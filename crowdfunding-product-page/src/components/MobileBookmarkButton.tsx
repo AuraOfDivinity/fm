@@ -7,7 +7,7 @@ type TMobileBookmarkButtonProps = ComponentPropsWithoutRef<'button'> & {
 
 const MobileBookmarkButton = ({ bookmarked, ...rest }: TMobileBookmarkButtonProps) => {
     return (
-        <button {...rest} className={styles.mobileBookmarlButton}>
+        <button {...rest} className={styles.mobileBookmarkButton}>
             <img
                 src={bookmarked ? '/images/icon-bookmark-active.svg' : '/images/icon-bookmark.svg'}
                 alt="mobile bookmark icon"
