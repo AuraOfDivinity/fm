@@ -1,18 +1,19 @@
 .modalCard__wrapper {
     width: 634px;
-    height: 157px;
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
     border-radius: 8px;
     border: 1px solid var(--color-gray-200);
+    padding-block: var(--spacing-400);
 
     .modalCard__innerWrapper {
         display: flex;
         flex-direction: row;
         gap: var(--spacing-300);
         align-items: flex-start;
-        width: 578px;
+        padding-inline: var(--spacing-300);
 
         .modalCard__content {
             display: flex;
@@ -48,7 +49,31 @@
 
             .modalCard__description {
                 color: var(--color-gray-500);
+                line-height: 2;
             }
+        }
+    }
+
+    .modalCard__bottomSection {
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        padding-block-start: var(--spacing-300);
+        border-block-start: 1px solid var(--color-gray-200);
+        margin-block-start: var(--spacing-300);
+        justify-content: space-between;
+
+        .modalCard__pledgeText {
+            display: flex;
+            color: var(--color-gray-500);
+            padding-inline: var(--spacing-300);
+            align-items: center;
+        }
+
+        .modalCard__pledgeButton {
+            display: flex;
+            gap: var(--spacing-200);
+            padding-inline-end: var(--spacing-300);
         }
     }
 }

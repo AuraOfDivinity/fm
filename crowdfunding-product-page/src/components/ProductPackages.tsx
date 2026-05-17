@@ -1,7 +1,9 @@
 import { usePledgeState } from '../hooks/usePledgeContext';
 import { usePledgeDispatch } from '../hooks/usePledgeDispatch';
+import { EModalState } from '../state/metadata';
 import { ActionType } from '../state/pledgeReducer';
 import Modal from './base/Modal';
+import CompletionModal from './modals/CompletionModal';
 import ModalRenderer from './modals/ModalRenderer';
 import ProductPackageCard from './ProductPackageCard';
 import styles from './ProductPackages.module.css';
@@ -15,6 +17,8 @@ const ProductPackages = () => {
             type: ActionType.ToggleModal,
         });
     };
+
+    const { modalState } = state;
 
     return (
         <>
@@ -59,8 +63,12 @@ const ProductPackages = () => {
                     />
                 </div>
             </div>
-            <Modal open={state.isModalOpen} onClose={handleToggleModal}>
-                <ModalRenderer />
+            <Modal
+                open={state.isModalOpen}
+                onClose={handleToggleModal}
+                renderClose={modalState === EModalState.Pledging ? true : false}
+            >
+                {modalState === EModalState.Pledging ? <ModalRenderer /> : <CompletionModal />}
             </Modal>
         </>
     );

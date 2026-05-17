@@ -1,6 +1,8 @@
 import { usePledgeDispatch } from '../../hooks/usePledgeDispatch';
 import { ActionType } from '../../state/pledgeReducer';
+import Button from '../base/Button';
 import CheckBox from '../base/CheckBox';
+import PledgeInput from '../PledgeInput';
 import styles from './ModalCard.module.css';
 
 export enum ModalState {
@@ -16,9 +18,10 @@ type TModalCardProps = {
     subTitle?: string;
     description: string;
     state: ModalState;
+    minPledgeAmount?: number;
 };
 
-const ModalCard = ({ id, title, seatCount, subTitle, description, state }: TModalCardProps) => {
+const ModalCard = ({ id, title, seatCount, subTitle, description, state, minPledgeAmount }: TModalCardProps) => {
     const dispatch = usePledgeDispatch();
 
     const handleOnChange = () => {
@@ -35,9 +38,17 @@ const ModalCard = ({ id, title, seatCount, subTitle, description, state }: TModa
         }
     };
 
+    const handleContinue = () => {
+        dispatch({
+            type: ActionType.Proceed,
+        });
+    };
+
+    const isActive = state === ModalState.Active;
+
     return (
         <div
-            className={`${styles.modalCard__wrapper} ${state === ModalState.Inactive && styles.modalCard__disabled} ${state === ModalState.Active && styles.modalCard__active}`}
+            className={`${styles.modalCard__wrapper} ${state === ModalState.Inactive && styles.modalCard__disabled} ${isActive && styles.modalCard__active}`}
         >
             <div className={styles.modalCard__innerWrapper}>
                 <div className={`${styles.modalCard__radio} `}>
@@ -61,6 +72,17 @@ const ModalCard = ({ id, title, seatCount, subTitle, description, state }: TModa
                     <p className={`${styles.modalCard__description} text-preset-7-regular`}>{description}</p>
                 </div>
             </div>
+            {isActive && (
+                <div className={styles.modalCard__bottomSection}>
+                    <p className={`${styles.modalCard__pledgeText} text-preset-7-regular`}>Enter your pledge</p>
+                    <div className={styles.modalCard__pledgeButton}>
+                        {minPledgeAmount && <PledgeInput placeholderAmount={minPledgeAmount} id={id} />}
+                        <Button color="green" size="s" onClick={handleContinue}>
+                            Continue
+                        </Button>
+                    </div>
+                </div>
+            )}
         </div>
     );
 };

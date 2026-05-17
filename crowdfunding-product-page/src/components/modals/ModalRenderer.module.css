@@ -11,6 +11,7 @@
 
         .modalRenderer__subHeading {
             color: var(--color-gray-500);
+            line-height: 2;
         }
     }
 

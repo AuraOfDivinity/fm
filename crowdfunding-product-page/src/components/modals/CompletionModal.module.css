@@ -1,0 +1,22 @@
+.completionModal {
+    width: 450px;
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-400);
+    align-items: center;
+    justify-content: center;
+    margin-block-end: var(--spacing-400);
+
+    .completionModal__content {
+        display: flex;
+        flex-direction: column;
+        gap: var(--spacing-200);
+        align-items: center;
+
+        .completionModal__description {
+            color: var(--color-gray-500);
+            line-height: 2;
+            text-align: center;
+        }
+    }
+}
