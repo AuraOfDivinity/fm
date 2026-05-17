@@ -18,7 +18,6 @@ const ProductBrief = () => {
     };
 
     const onBookmarkClick = () => {
-        console.log({ state });
         dispatch({
             type: ActionType.ToggleBookmark,
         });
