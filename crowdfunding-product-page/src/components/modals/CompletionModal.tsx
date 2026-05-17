@@ -18,7 +18,7 @@ const CompletionModal = () => {
 
     return (
         <div className={styles.completionModal}>
-            <img src="/public/images/icon-check.svg" alt="check icon" />
+            <img src="/images/icon-check.svg" alt="check icon" />
             <div className={styles.completionModal__content}>
                 <div className={`${styles.completionModal__title} text-preset-3`}>Thanks for your support!</div>
                 <div className={`${styles.completionModal__description} text-preset-6-regular`}>

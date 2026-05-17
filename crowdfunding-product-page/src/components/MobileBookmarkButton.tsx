@@ -9,7 +9,7 @@ const MobileBookmarkButton = ({ bookmarked, ...rest }: TMobileBookmarkButtonProp
     return (
         <button {...rest} className={styles.mobileBookmarlButton}>
             <img
-                src={bookmarked ? '/public/images/icon-bookmark-active.svg' : '/public/images/icon-bookmark.svg'}
+                src={bookmarked ? '/images/icon-bookmark-active.svg' : '/images/icon-bookmark.svg'}
                 alt="mobile bookmark icon"
             />
         </button>

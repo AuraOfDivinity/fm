@@ -17,7 +17,7 @@ const Modal = ({ open, onClose, children, renderClose = true }: TModalProps) => 
                     <div className={styles.modal__head}>
                         {renderClose && (
                             <img
-                                src="/public/images/icon-close-modal.svg"
+                                src="/images/icon-close-modal.svg"
                                 alt="close button"
                                 onClick={onClose}
                                 className={styles.modal__close}

@@ -18,10 +18,10 @@ const MobileNavbar = () => {
     return (
         <div className={styles.mobileNavbar__gradientWrapper}>
             <div className={styles.mobileNavbar}>
-                <img src="/public/images/logo.svg" alt="mobile navbar logo" />
+                <img src="/images/logo.svg" alt="mobile navbar logo" />
                 {!isMobileNavbarOpen && (
                     <img
-                        src="/public/images/icon-hamburger.svg"
+                        src="/images/icon-hamburger.svg"
                         alt="mobile hamburger icon"
                         onClick={handleIconClick}
                         className={styles.mobileNavbar__icon}
@@ -29,7 +29,7 @@ const MobileNavbar = () => {
                 )}
                 {isMobileNavbarOpen && (
                     <img
-                        src="/public/images/icon-close-menu.svg"
+                        src="/images/icon-close-menu.svg"
                         alt="mobile close meu icon"
                         onClick={handleIconClick}
                         className={styles.mobileNavbar__icon}
