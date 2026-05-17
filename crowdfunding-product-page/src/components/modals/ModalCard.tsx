@@ -70,6 +70,14 @@ const ModalCard = ({ id, title, seatCount, subTitle, description, state, minPled
                         )}
                     </div>
                     <p className={`${styles.modalCard__description} text-preset-7-regular`}>{description}</p>
+                    {seatCount && (
+                        <div className={`${styles.modalCard__Mobileseats}`}>
+                            <div className={`${styles.modalCard__seatCount} text-preset-5-bold`}>{seatCount}</div>
+                            <div className={`${styles.modalCard__seatLeft}`} text-preset-7-regular>
+                                left
+                            </div>
+                        </div>
+                    )}
                 </div>
             </div>
             {isActive && (

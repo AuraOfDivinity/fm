@@ -23,6 +23,11 @@
         border-radius: 8px;
         align-items: center;
 
+        @media screen and (max-width: 768px) {
+            padding-inline: var(--spacing-300);
+            width: 340px;
+        }
+
         .modal__head {
             display: flex;
             width: 100%;

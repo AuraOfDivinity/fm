@@ -7,6 +7,10 @@
     justify-content: center;
     margin-block-end: var(--spacing-400);
 
+    @media screen and (max-width: 768px) {
+        width: 100%;
+    }
+
     .completionModal__content {
         display: flex;
         flex-direction: column;

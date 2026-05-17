@@ -4,6 +4,10 @@
     gap: var(--spacing-400);
     padding-block-end: var(--spacing-400);
 
+    @media screen and (max-width: 768px) {
+        width: 340px;
+    }
+
     .text {
         display: flex;
         flex-direction: column;
