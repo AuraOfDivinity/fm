@@ -25,7 +25,7 @@ const ModalRenderer = () => {
                             description={pledge.description}
                             state={pledge.state}
                             seatCount={pledge.seatCount}
-                            minPledgeAmount={pledge.mininmumPledgeAmount}
+                            minPledgeAmount={pledge.minimumPledgeAmount}
                         />
                     );
                 })}

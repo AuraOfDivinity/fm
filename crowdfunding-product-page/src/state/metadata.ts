@@ -9,7 +9,7 @@ export type PledgeItem = {
     state: ModalState;
     pledgeAmount?: number;
     selected: boolean;
-    mininmumPledgeAmount?: number;
+    minimumPledgeAmount?: number;
 };
 
 export enum EModalState {
@@ -35,7 +35,6 @@ export const defaultPledgeState: TPledgeState = {
             state: ModalState.Default,
             pledgeAmount: 0,
             selected: false,
-            // mininmumPledgeAmount: 0,
         },
         {
             id: 1,
@@ -47,7 +46,7 @@ export const defaultPledgeState: TPledgeState = {
             seatCount: 101,
             pledgeAmount: 0,
             selected: false,
-            mininmumPledgeAmount: 25,
+            minimumPledgeAmount: 25,
         },
         {
             id: 2,
@@ -59,7 +58,7 @@ export const defaultPledgeState: TPledgeState = {
             seatCount: 64,
             pledgeAmount: 0,
             selected: false,
-            mininmumPledgeAmount: 75,
+            minimumPledgeAmount: 75,
         },
         {
             id: 3,
@@ -71,7 +70,7 @@ export const defaultPledgeState: TPledgeState = {
             // seatCount: 0,
             pledgeAmount: 0,
             selected: false,
-            mininmumPledgeAmount: 200,
+            minimumPledgeAmount: 200,
         },
     ],
     modalState: EModalState.Pledging,
