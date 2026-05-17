@@ -7,7 +7,8 @@
     gap: var(--spacing-400);
     border-radius: 8px;
     border: 1px solid var(--color-gray-200);
-    /* width: 730px; */
+    position: relative;
+    inset-block-end: 6rem;
 
     .productPackages__details {
         gap: 27px;

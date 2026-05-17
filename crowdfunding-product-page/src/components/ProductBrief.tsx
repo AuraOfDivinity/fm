@@ -1,5 +1,6 @@
 import { usePledgeDispatch } from '../hooks/usePledgeDispatch';
 import { ActionType } from '../state/pledgeReducer';
+import NumbersBlock from './NumbersBlock';
 import styles from './ProductBrief.module.css';
 import ProductPackages from './ProductPackages';
 
@@ -34,6 +35,7 @@ const ProductBrief = () => {
                         </button>
                     </div>
                 </article>
+                <NumbersBlock />
                 <ProductPackages />
             </div>
         </>

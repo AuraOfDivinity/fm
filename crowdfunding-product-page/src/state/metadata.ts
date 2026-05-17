@@ -66,7 +66,7 @@ export const defaultPledgeState: TPledgeState = {
                 'You get two Special Edition Mahogany stands, a Backer T-Shirt, and a personal thank you. You’ll be added to our Backer member list.  Shipping is included.',
             state: ModalState.Inactive,
             subTitle: 'Pledge $200 or more',
-            seatCount: 0,
+            // seatCount: 0,
             pledgeAmount: 0,
             selected: false,
             mininmumPledgeAmount: 200,
