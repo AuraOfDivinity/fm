@@ -34,6 +34,5 @@
 }
 
 .bookmark.bookmark--bookmarked:hover {
-    background-color: var(--color-green-700);
     color: var(--color-white);
 }

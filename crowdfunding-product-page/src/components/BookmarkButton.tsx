@@ -8,7 +8,7 @@ type TBookmarButtonProps = ComponentPropsWithoutRef<'button'> & {
 const BookmarkButton = ({ bookmarked = false, ...rest }: TBookmarButtonProps) => {
     return (
         <button className={`${styles.bookmark} ${bookmarked ? styles['bookmark--bookmarked'] : ''}`} {...rest}>
-            <img src={'/public/images/icon-bookmark.svg'} />
+            <img src={bookmarked ? '/public/images/icon-bookmark-active.svg' : '/public/images/icon-bookmark.svg'} />
             <p className={`text-preset-6-bold `}>{bookmarked ? 'Bookmarked' : 'Bookmark'}</p>
         </button>
     );
