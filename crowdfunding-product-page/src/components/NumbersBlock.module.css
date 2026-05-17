@@ -13,11 +13,25 @@
     width: 650px;
     flex-direction: column;
 
+    @media screen and (max-width: 768px) {
+        flex-direction: column;
+        width: 80vw;
+        padding-inline: var(--spacing-300);
+        align-items: center;
+        justify-content: center;
+        margin-top: var(--spacing-300);
+    }
+
     .numberBlock__innerWrapper {
         display: flex;
         width: 100%;
         gap: var(--spacing-400);
         justify-content: space-between;
+
+        @media screen and (max-width: 768px) {
+            flex-direction: column;
+            width: 279px;
+        }
     }
 }
 
@@ -27,6 +41,10 @@
     align-items: center;
     justify-content: center;
     width: 150px;
+
+    @media screen and (max-width: 768px) {
+        width: 100%;
+    }
 
     .innerSection__description {
         line-height: 2;

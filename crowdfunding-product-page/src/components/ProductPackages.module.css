@@ -10,6 +10,12 @@
     position: relative;
     inset-block-end: 6rem;
 
+    @media screen and (max-width: 768px) {
+        width: 80vw;
+        padding-inline: var(--spacing-300);
+        padding-block: var(--spacing-400);
+    }
+
     .productPackages__details {
         gap: 27px;
         display: flex;
@@ -17,6 +23,10 @@
         align-items: start;
         justify-content: center;
         width: 634px;
+
+        @media screen and (max-width: 768px) {
+            width: 100%;
+        }
     }
 
     .productPackages__cards {

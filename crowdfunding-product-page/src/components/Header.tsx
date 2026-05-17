@@ -1,16 +1,17 @@
-import styles from './Header.module.css'
-import Navbar from './Navbar'
+import styles from './Header.module.css';
+import Navbar from './Navbar';
 
 const Header = () => {
-    return(
-    <>
-        <div className={styles.header}>
-            <img src='/images/image-hero-desktop.jpg' alt='header-background' className={styles.header__image}/>
-            <div className={styles.header__navbar}>
-                <Navbar/>
+    return (
+        <>
+            <div className={styles.header}>
+                <img src="/images/image-hero-desktop.jpg" alt="header-background" className={styles.header__image} />
+                <div className={styles.header__navbar}>
+                    <Navbar />
+                </div>
             </div>
-        </div>
-    </>)
-}
+        </>
+    );
+};
 
-export default Header
+export default Header;

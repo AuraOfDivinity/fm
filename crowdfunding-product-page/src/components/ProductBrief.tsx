@@ -2,6 +2,7 @@ import { usePledgeState } from '../hooks/usePledgeContext';
 import { usePledgeDispatch } from '../hooks/usePledgeDispatch';
 import { ActionType } from '../state/pledgeReducer';
 import BookmarkButton from './BookmarkButton';
+import MobileBookmarkButton from './MobileBookmarkButton';
 import NumbersBlock from './NumbersBlock';
 import styles from './ProductBrief.module.css';
 import ProductPackages from './ProductPackages';
@@ -39,6 +40,7 @@ const ProductBrief = () => {
                             Back this project
                         </button>
                         <BookmarkButton bookmarked={bookMarked} onClick={onBookmarkClick} />
+                        <MobileBookmarkButton bookmarked={bookMarked} onClick={onBookmarkClick} />
                     </div>
                 </article>
                 <NumbersBlock />

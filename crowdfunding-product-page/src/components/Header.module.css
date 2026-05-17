@@ -1,13 +1,17 @@
-
-.header{
+.header {
     width: 100vw;
-    .header__image{
+
+    .header__image {
         width: 100vw;
     }
 
-    .header__navbar{
+    .header__navbar {
         width: 100%;
         position: absolute;
         top: var(--spacing-600);
+
+        @media screen and (max-width: 768px) {
+            display: none;
+        }
     }
 }

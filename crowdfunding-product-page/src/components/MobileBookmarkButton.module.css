@@ -1,0 +1,7 @@
+.mobileBookmarlButton {
+    border: none;
+    background-color: var(--color-white);
+    @media screen and (min-width: 768px) {
+        display: none;
+    }
+}

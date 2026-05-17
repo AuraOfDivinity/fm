@@ -18,6 +18,16 @@
         flex-direction: column;
         align-items: center;
 
+        @media screen and (max-width: 768px) {
+            width: 80%;
+            height: 284px;
+            padding-inline: var(--spacing-300);
+            inset-block-end: 4rem;
+            text-align: center;
+            padding-block-end: var(--spacing-300);
+            /* gap: var(--spacing-300); */
+        }
+
         .productBrief__logo {
             position: relative;
             inset-block-end: 1.75rem;
@@ -47,10 +57,19 @@
                 color: var(--color-white);
                 justify-content: center;
                 cursor: pointer;
+
+                @media screen and (max-width: 768px) {
+                    width: 214px;
+                }
             }
 
             .productBrief__back:hover {
                 background-color: var(--color-green-700);
+            }
+
+            @media screen and (max-width: 768px) {
+                gap: var(--spacing-100);
+                width: 280px;
             }
         }
     }
