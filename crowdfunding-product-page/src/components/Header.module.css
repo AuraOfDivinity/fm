@@ -3,6 +3,18 @@
 
     .header__image {
         width: 100vw;
+        @media screen and (max-width: 768px) {
+            display: none;
+        }
+    }
+
+    .header__imageMobile {
+        width: 100%;
+        height: 300px;
+        object-fit: cover;
+        @media screen and (min-width: 768px) {
+            display: none;
+        }
     }
 
     .header__navbar {

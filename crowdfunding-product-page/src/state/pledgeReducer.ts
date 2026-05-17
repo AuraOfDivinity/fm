@@ -9,6 +9,7 @@ export enum ActionType {
     Proceed = 'PROCEED',
     ResetModal = 'RESETMODAL',
     ToggleBookmark = 'TOGGLEBOOKMARK',
+    ToggleMobileNavbar = 'TOGGLEMOBILENAVBAR',
 }
 
 export type TAction =
@@ -18,7 +19,8 @@ export type TAction =
     | { type: ActionType.ToggleModal }
     | { type: ActionType.Proceed }
     | { type: ActionType.ResetModal }
-    | { type: ActionType.ToggleBookmark };
+    | { type: ActionType.ToggleBookmark }
+    | { type: ActionType.ToggleMobileNavbar };
 
 export const pledgeReducer = (state: TPledgeState, action: TAction): TPledgeState => {
     switch (action.type) {
@@ -81,6 +83,11 @@ export const pledgeReducer = (state: TPledgeState, action: TAction): TPledgeStat
             return {
                 ...state,
                 bookMarked: !state.bookMarked,
+            };
+        case ActionType.ToggleMobileNavbar:
+            return {
+                ...state,
+                isMobileNavbarOpen: !state.isMobileNavbarOpen,
             };
         default:
             return state;

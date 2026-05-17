@@ -27,9 +27,7 @@ export const Route = createRootRoute({
 function RootComponent() {
     return (
         <RootDocument>
-            <PledgeStateProvider>
-                <Outlet />
-            </PledgeStateProvider>
+            <Outlet />
         </RootDocument>
     );
 }
@@ -41,9 +39,11 @@ function RootDocument({ children }: Readonly<{ children: ReactNode }>) {
                 <HeadContent />
             </head>
             <body>
-                <Header />
-                {children}
-                <Scripts />
+                <PledgeStateProvider>
+                    <Header />
+                    {children}
+                    <Scripts />
+                </PledgeStateProvider>
             </body>
         </html>
     );

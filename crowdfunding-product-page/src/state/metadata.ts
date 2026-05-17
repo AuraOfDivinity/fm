@@ -22,6 +22,7 @@ export type TPledgeState = {
     modalState: EModalState;
     isModalOpen: boolean;
     bookMarked: boolean;
+    isMobileNavbarOpen: boolean;
 };
 
 export const defaultPledgeState: TPledgeState = {
@@ -76,4 +77,5 @@ export const defaultPledgeState: TPledgeState = {
     modalState: EModalState.Pledging,
     isModalOpen: false,
     bookMarked: false,
+    isMobileNavbarOpen: false,
 };
