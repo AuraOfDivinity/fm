@@ -1,0 +1,35 @@
+.bookmark {
+    display: flex;
+    flex-direction: row;
+    border: none;
+    border-radius: 32.5px;
+    width: 174px;
+    background-color: var(--color-gray-200);
+    align-items: center;
+    color: var(--color-gray-500);
+    cursor: pointer;
+
+    img {
+        position: relative;
+        inset-inline-end: 5px;
+    }
+
+    p {
+        margin-inline-start: 8px;
+    }
+}
+
+.bookmark:hover {
+    background-color: var(--color-gray-300);
+}
+
+.bookmark.bookmark--bookmarked {
+    background-color: var(--color-green-400);
+    color: var(--color-white);
+    width: 190px;
+}
+
+.bookmark.bookmark--bookmarked:hover {
+    background-color: var(--color-green-700);
+    color: var(--color-white);
+}

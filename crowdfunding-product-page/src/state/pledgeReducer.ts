@@ -8,6 +8,7 @@ export enum ActionType {
     ToggleModal = 'TOGGLEMODAL',
     Proceed = 'PROCEED',
     ResetModal = 'RESETMODAL',
+    ToggleBookmark = 'TOGGLEBOOKMARK',
 }
 
 export type TAction =
@@ -16,7 +17,8 @@ export type TAction =
     | { type: ActionType.Unselect; id: number }
     | { type: ActionType.ToggleModal }
     | { type: ActionType.Proceed }
-    | { type: ActionType.ResetModal };
+    | { type: ActionType.ResetModal }
+    | { type: ActionType.ToggleBookmark };
 
 export const pledgeReducer = (state: TPledgeState, action: TAction): TPledgeState => {
     switch (action.type) {
@@ -74,6 +76,11 @@ export const pledgeReducer = (state: TPledgeState, action: TAction): TPledgeStat
                 ...state,
                 modalState: EModalState.Pledging,
                 isModalOpen: false,
+            };
+        case ActionType.ToggleBookmark:
+            return {
+                ...state,
+                bookMarked: !state.bookMarked,
             };
         default:
             return state;

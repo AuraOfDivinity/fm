@@ -49,24 +49,8 @@
                 cursor: pointer;
             }
 
-            .productBrief__bookmark {
-                display: flex;
-                flex-direction: row;
-                border: none;
-                border-radius: 32.5px;
-                width: 174px;
-                background-color: var(--color-gray-200);
-                align-items: center;
-                color: var(--color-gray-500);
-
-                img {
-                    position: relative;
-                    inset-inline-end: 5px;
-                }
-
-                p {
-                    margin-inline-start: 8px;
-                }
+            .productBrief__back:hover {
+                background-color: var(--color-green-700);
             }
         }
     }

@@ -21,6 +21,7 @@ export type TPledgeState = {
     pledges: PledgeItem[];
     modalState: EModalState;
     isModalOpen: boolean;
+    bookMarked: boolean;
 };
 
 export const defaultPledgeState: TPledgeState = {
@@ -74,4 +75,5 @@ export const defaultPledgeState: TPledgeState = {
     ],
     modalState: EModalState.Pledging,
     isModalOpen: false,
+    bookMarked: false,
 };

@@ -1,10 +1,13 @@
+import { usePledgeState } from '../hooks/usePledgeContext';
 import { usePledgeDispatch } from '../hooks/usePledgeDispatch';
 import { ActionType } from '../state/pledgeReducer';
+import BookmarkButton from './BookmarkButton';
 import NumbersBlock from './NumbersBlock';
 import styles from './ProductBrief.module.css';
 import ProductPackages from './ProductPackages';
 
 const ProductBrief = () => {
+    const state = usePledgeState();
     const dispatch = usePledgeDispatch();
 
     const onBackClick = () => {
@@ -12,6 +15,15 @@ const ProductBrief = () => {
             type: ActionType.ToggleModal,
         });
     };
+
+    const onBookmarkClick = () => {
+        console.log({ state });
+        dispatch({
+            type: ActionType.ToggleBookmark,
+        });
+    };
+
+    const { bookMarked } = state;
 
     return (
         <>
@@ -26,13 +38,7 @@ const ProductBrief = () => {
                         <button className={`${styles.productBrief__back} text-preset-6-bold`} onClick={onBackClick}>
                             Back this project
                         </button>
-                        <button className={styles.productBrief__bookmark}>
-                            <img
-                                className={styles.productBrief__bookmarkIcon}
-                                src={'/public/images/icon-bookmark.svg'}
-                            />
-                            <p className={`text-preset-6-bold `}>Bookmark</p>
-                        </button>
+                        <BookmarkButton bookmarked={bookMarked} onClick={onBookmarkClick} />
                     </div>
                 </article>
                 <NumbersBlock />
