@@ -29,7 +29,11 @@ const ProductBrief = () => {
         <>
             <div className={styles.productBrief__wrapper}>
                 <article className={styles.productBrief}>
-                    <img src={'/images/logo-mastercraft.svg'} className={styles.productBrief__logo} />
+                    <img
+                        src={'/images/logo-mastercraft.svg'}
+                        className={styles.productBrief__logo}
+                        alt="mastercraft logo"
+                    />
                     <p className={`${styles.productBrief__title} text-preset-2`}>Mastercraft Bamboo Monitor Riser</p>
                     <p className={`${styles.productBrief__description} text-preset-6-regular`}>
                         A beautiful & handcrafted monitor stand to reduce neck and eye strain.
