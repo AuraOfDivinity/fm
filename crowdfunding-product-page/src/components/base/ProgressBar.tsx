@@ -10,7 +10,7 @@ const ProgressBar = ({ width = 89 }: { width: number }) => {
 
     return (
         <div className={styles.progressBar}>
-            <div className={styles.progressBar__fill} style={{ width: `${progrssWidth}%` }}></div>
+            <div className={styles.progressBar__fill} style={{ width: `${progrssWidth}%` }} role="progressbar"></div>
         </div>
     );
 };
