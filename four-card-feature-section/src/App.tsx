@@ -1,7 +1,12 @@
 import "./App.css";
+import FeatureSection from "./components/FeatureSection";
 
 function App() {
-  return <></>;
+  return (
+    <>
+      <FeatureSection />
+    </>
+  );
 }
 
 export default App;

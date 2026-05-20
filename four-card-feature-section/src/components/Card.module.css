@@ -1,0 +1,51 @@
+.card {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-400);
+  justify-content: center;
+  padding: var(--spacing-400);
+  border-radius: 8px;
+  box-shadow: var(--card-box-shadow);
+  height: 100%;
+
+  .card__header {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+
+    .card__title {
+      text-align: start;
+      color: var(--color-grey-400);
+    }
+
+    .card__description {
+      text-align: start;
+      color: var(--color-grey-400);
+    }
+  }
+
+  .card__content {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: end;
+    align-items: center;
+  }
+}
+
+.border-blue {
+  border-block-start: 4px solid var(--color-blue);
+}
+
+.border-orange {
+  border-block-start: 4px solid var(--color-orange);
+}
+
+.border-red {
+  border-block-start: 4px solid var(--color-red);
+}
+
+.border-cyan {
+  border-block-start: 4px solid var(--color-cyan);
+}
