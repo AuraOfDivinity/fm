@@ -1,3 +1,6 @@
+/* IMPORTS */
+@import url("https://fonts.googleapis.com/css2?family=Poppins");
+
 /* 1. Use a more-intuitive box-sizing model */
 *,
 *::before,
@@ -72,4 +75,55 @@ h6 {
 #root,
 #__next {
   isolation: isolate;
+}
+
+:root {
+  --color-grey-500: #4d4f62;
+  --color-grey-400: #6a6178;
+  --color-white: #ffffff;
+  --color-red: #ea5454;
+  --color-cyan: #44d3d2;
+  --color-blue: #549ef2;
+  --color-orange: #fcae4a;
+
+  --spacing-100: 8px;
+  --spacing-200: 16px;
+  --spacing-300: 24px;
+  --spacing-400: 32px;
+  --spacing-500: 40px;
+}
+
+.text-preset-1 {
+  font-size: 36px;
+  line-height: 1.4;
+  letter-spacing: 0.25px;
+  font-weight: 600;
+}
+
+.text-preset-2 {
+  font-size: 36px;
+  line-height: 1.4;
+  letter-spacing: 0.25px;
+  font-weight: 200;
+}
+
+.text-preset-3 {
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 1.35;
+  letter-spacing: 0px;
+}
+
+.text-preset-4 {
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 1.4;
+  letter-spacing: 0px;
+}
+
+.text-preset-5 {
+  font-size: 13px;
+  font-weight: 400;
+  line-height: 1.6;
+  letter-spacing: 0px;
 }
