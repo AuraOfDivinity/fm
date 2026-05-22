@@ -1,0 +1,22 @@
+.app {
+  display: flex;
+  padding: var(--spacing-1100) var(--spacing-500);
+  flex-direction: row;
+  align-items: start;
+  gap: var(--spacing-500);
+  background-color: var(--color-rose-50);
+  min-height: 100vh;
+
+  .menu {
+    flex-grow: 2;
+    background-color: lightblue;
+    min-width: 800px;
+    height: 100vh;
+  }
+
+  .cart {
+    flex-grow: 1;
+    background-color: lightcoral;
+    min-height: 300px;
+  }
+}
