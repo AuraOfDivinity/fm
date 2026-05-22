@@ -1,0 +1,46 @@
+.ATCButton {
+  width: 100%;
+  position: relative;
+  inset-block-end: 23px;
+
+  .cartButton__inCartWrapper {
+    background-color: var(--color-red);
+    color: var(--color-white);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: var(--spacing-150);
+    width: 160px;
+    max-width: 160px;
+    border-radius: 999px;
+    margin: 0 auto;
+
+    .cartButton__countIcon {
+      border: 1px solid white;
+      width: 20px;
+      height: 20px;
+      border-radius: 999px;
+      padding: 4px;
+      cursor: pointer;
+    }
+  }
+
+  .cartButton__defaultCartWrapper {
+    background-color: var(--color-white);
+    color: var(--color-black);
+    display: flex;
+    flex-direction: row;
+    gap: var(--spacing-100);
+    border: 1px solid var(--color-rose-400);
+    padding: var(--spacing-150);
+    justify-content: center;
+    align-items: center;
+    border-radius: 999px;
+    width: 160px;
+    max-width: 160px;
+    margin: 0 auto;
+    position: relative;
+    inset-block-end: 35px;
+  }
+}

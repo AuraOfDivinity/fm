@@ -1,4 +1,5 @@
 import styles from "./ProductCard.module.css";
+import ATCButton from "./base/ATCButton.tsx";
 
 type TProductCardProps = {
   title: string;
@@ -17,6 +18,7 @@ const ProductCard = ({
   return (
     <article className={styles.card}>
       <img src={assetUrl} className={styles.card__image} />
+      <ATCButton isInCart={true} />
       <div className={styles.card__content}>
         <p className={`${styles.card__title} text-preset-4-regular`}>{title}</p>
         <p className={`${styles.card__description} text-preset-3`}>
