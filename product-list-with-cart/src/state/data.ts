@@ -30,7 +30,7 @@ const defaultProductData: TProductItem[] = [
     name: "Waffle with Berries",
     category: "Waffle",
     price: 6.5,
-    cartQuantity: 0,
+    cartQuantity: 1,
   },
   {
     id: 1,

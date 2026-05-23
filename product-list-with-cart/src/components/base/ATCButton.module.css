@@ -41,6 +41,6 @@
     max-width: 160px;
     margin: 0 auto;
     position: relative;
-    inset-block-end: 35px;
+    cursor: pointer;
   }
 }

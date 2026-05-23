@@ -5,8 +5,9 @@ type TProductCardProps = {
   title: string;
   description: string;
   price: number;
-  quantityInCart?: number;
+  quantityInCart: number;
   assetUrl: string;
+  id: number;
 };
 
 const ProductCard = ({
@@ -14,11 +15,20 @@ const ProductCard = ({
   description,
   price,
   assetUrl,
+  quantityInCart,
+  id,
 }: TProductCardProps) => {
   return (
     <article className={styles.card}>
-      <img src={assetUrl} className={styles.card__image} />
-      <ATCButton isInCart={true} />
+      <img
+        src={assetUrl}
+        className={`${styles.card__image} ${quantityInCart > 0 ? styles["in-cart"] : ""}`}
+      />
+      <ATCButton
+        isInCart={quantityInCart > 0}
+        quantityInCart={quantityInCart}
+        id={id}
+      />
       <div className={styles.card__content}>
         <p className={`${styles.card__title} text-preset-4-regular`}>{title}</p>
         <p className={`${styles.card__description} text-preset-3`}>

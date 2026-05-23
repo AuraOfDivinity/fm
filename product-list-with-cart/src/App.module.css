@@ -17,5 +17,7 @@
     background-color: lightcoral;
     min-height: 300px;
     min-width: 400px;
+    position: sticky;
+    top: 0;
   }
 }

@@ -31,6 +31,8 @@ const Menu = () => {
               description={card.name}
               price={card.price}
               assetUrl={resolveImageUrl(card.image.desktop)}
+              quantityInCart={card.cartQuantity}
+              id={card.id}
             />
           );
         })}
