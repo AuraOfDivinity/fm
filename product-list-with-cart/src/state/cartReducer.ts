@@ -3,7 +3,8 @@ import type { TCartState } from "./data";
 export type TAction =
   | { type: "ADD"; id: number }
   | { type: "REMOVE"; id: number }
-  | { type: "RESET" };
+  | { type: "RESET" }
+  | { type: "REMOVEALLBYID"; id: number };
 
 export const cartReducer = (state: TCartState, action: TAction): TCartState => {
   switch (action.type) {
@@ -42,7 +43,20 @@ export const cartReducer = (state: TCartState, action: TAction): TCartState => {
           return { ...product, cartQuantity: 0 };
         }),
       };
-      break;
+    case "REMOVEALLBYID":
+      return {
+        ...state,
+        productData: state.productData.map((product) => {
+          if (product.id == action.id) {
+            return {
+              ...product,
+              cartQuantity: 0,
+            };
+          } else {
+            return product;
+          }
+        }),
+      };
     default:
       return state;
   }

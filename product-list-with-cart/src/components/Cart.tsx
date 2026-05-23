@@ -2,6 +2,7 @@ import styles from "./Cart.module.css";
 import CartBannerLogo from "../assets/images/icon-carbon-neutral.svg";
 import { useCartState } from "../hooks/useCartState";
 import { useMemo } from "react";
+import CartItem from "./CartItem";
 
 const Cart = () => {
   const state = useCartState();
@@ -33,7 +34,18 @@ const Cart = () => {
       <div
         className={`${styles.cart__title} text-preset-2`}
       >{`Your Cart(${quantity})`}</div>
-      <div></div>
+      <div className={styles.cart__itemsWrapper}>
+        {itemsInCart.map((item) => {
+          return (
+            <CartItem
+              name={item.name}
+              id={item.id}
+              unitPrice={item.price}
+              quantity={item.cartQuantity}
+            />
+          );
+        })}
+      </div>
       <div className={styles.cart__totalWrapper}>
         <p className={`${styles.cart__totalText} text-preset-4-regular`}>
           Order Total
