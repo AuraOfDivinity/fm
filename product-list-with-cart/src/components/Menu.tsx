@@ -1,6 +1,6 @@
 import styles from "./Menu.module.css";
-import data from "../../data.json";
 import ProductCard from "./ProductCard.tsx";
+import { useCartState } from "../hooks/useCartState.ts";
 
 const imageModules = import.meta.glob("../assets/images/*", {
   eager: true,
@@ -18,11 +18,12 @@ const resolveImageUrl = (imagePath: string) => {
 };
 
 const Menu = () => {
+  const state = useCartState();
   return (
     <section>
       <div className={`text-preset-1`}>Desserts</div>
       <div className={styles.menu__cardContainer}>
-        {data.map((card) => {
+        {state.productData.map((card) => {
           return (
             <ProductCard
               key={card.name}
