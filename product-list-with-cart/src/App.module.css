@@ -9,14 +9,16 @@
 
   .menu {
     flex-grow: 2;
-    background-color: lightblue;
-    min-width: 800px;
-    height: 100vh;
+    background-color: var(--color-rose-50);
   }
 
   .cart {
     flex-grow: 1;
-    background-color: lightcoral;
+    background-color: var(--color-white);
     min-height: 300px;
+    min-width: 400px;
+    position: sticky;
+    top: var(--spacing-500);
+    border-radius: 12px;
   }
 }
