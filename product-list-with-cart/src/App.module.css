@@ -14,10 +14,11 @@
 
   .cart {
     flex-grow: 1;
-    background-color: lightcoral;
+    background-color: var(--color-white);
     min-height: 300px;
     min-width: 400px;
     position: sticky;
-    top: 0;
+    top: var(--spacing-500);
+    border-radius: 12px;
   }
 }

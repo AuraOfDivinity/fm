@@ -1,0 +1,39 @@
+.cart__wrapper {
+  padding: var(--spacing-300);
+  gap: var(--spacing-300);
+  display: flex;
+  flex-direction: column;
+
+  .cart__totalWrapper {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+    .cart__totalText {
+      color: var(--color-rose-900);
+    }
+
+    .cart__totalAmount {
+      color: var(--color-rose-900);
+    }
+  }
+
+  .cart__title {
+    color: var(--color-red);
+  }
+
+  .cart__banner {
+    border-radius: var(--spacing-100);
+    background-color: var(--color-rose-50);
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    padding: var(--spacing-200);
+    gap: var(--spacing-100);
+
+    .cart__bannerText {
+      color: var(--color-rose-900);
+    }
+  }
+}

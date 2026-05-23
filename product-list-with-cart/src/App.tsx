@@ -1,5 +1,6 @@
 import styles from "./App.module.css";
 import Menu from "./components/Menu.tsx";
+import Cart from "./components/Cart.tsx";
 
 function App() {
   return (
@@ -7,7 +8,9 @@ function App() {
       <div className={styles.menu}>
         <Menu />
       </div>
-      <div className={styles.cart}></div>
+      <div className={styles.cart}>
+        <Cart />
+      </div>
     </div>
   );
 }
