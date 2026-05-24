@@ -1,11 +1,17 @@
 import styles from "./Cart.module.css";
 import CartBannerLogo from "../assets/images/icon-carbon-neutral.svg";
 import { useCartState } from "../hooks/useCartState";
-import { useMemo } from "react";
+import { useMemo, useState } from "react";
 import CartItem from "./CartItem";
 import Button from "./base/Button";
+import Modal from "./base/Modal";
+import { useOutsideClickHandler } from "../hooks/useOutsideClickHandler";
+import ConfirmOrderModal from "./modals/ConfirmOrderModal";
 
 const Cart = () => {
+  const [isConfirmModalVisible, setIsConfirmModalVisible] =
+    useState<boolean>(false);
+
   const state = useCartState();
   const { productData } = state;
 
@@ -29,6 +35,14 @@ const Cart = () => {
     () => productData.filter((p) => p.cartQuantity > 0),
     [productData],
   );
+
+  const handleConfirmOrderClick = () => {
+    setIsConfirmModalVisible((isVisible) => !isVisible);
+  };
+
+  const modalRef = useOutsideClickHandler(() => {
+    handleConfirmOrderClick();
+  });
 
   return (
     <section className={styles.cart__wrapper}>
@@ -62,7 +76,12 @@ const Cart = () => {
           delivery
         </p>
       </div>
-      <Button>Confirm Order</Button>
+      <Button onClick={handleConfirmOrderClick}>Confirm Order</Button>
+      {isConfirmModalVisible && (
+        <Modal ref={modalRef} handleClose={handleConfirmOrderClick}>
+          <ConfirmOrderModal handleComplete={handleConfirmOrderClick} />
+        </Modal>
+      )}
     </section>
   );
 };
