@@ -4,4 +4,10 @@
   grid-template-rows: repeat(3, 1fr);
   gap: var(--spacing-300);
   margin-block-start: var(--spacing-400);
+
+  @media screen and (max-width: 768px) {
+    display: flex;
+    flex-direction: column;
+    margin-block-start: var(--spacing-300);
+  }
 }
