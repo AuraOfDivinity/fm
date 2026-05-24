@@ -3,6 +3,7 @@ import CartBannerLogo from "../assets/images/icon-carbon-neutral.svg";
 import { useCartState } from "../hooks/useCartState";
 import { useMemo } from "react";
 import CartItem from "./CartItem";
+import Button from "./base/Button";
 
 const Cart = () => {
   const state = useCartState();
@@ -33,7 +34,7 @@ const Cart = () => {
     <section className={styles.cart__wrapper}>
       <div
         className={`${styles.cart__title} text-preset-2`}
-      >{`Your Cart(${quantity})`}</div>
+      >{`Your Cart (${quantity})`}</div>
       <div className={styles.cart__itemsWrapper}>
         {itemsInCart.map((item) => {
           return (
@@ -61,6 +62,7 @@ const Cart = () => {
           delivery
         </p>
       </div>
+      <Button>Confirm Order</Button>
     </section>
   );
 };

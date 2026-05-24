@@ -1,0 +1,23 @@
+.button {
+  width: 100%;
+  padding: var(--spacing-200);
+  color: var(--color-white);
+  background-color: var(--color-red);
+  border-radius: 999px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+
+  font-family: var(--font-main);
+  font-size: var(--spacing-200);
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+
+  transition: filter 0.3s ease;
+}
+
+.button:hover {
+  filter: brightness(0.85);
+}
