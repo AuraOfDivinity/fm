@@ -7,9 +7,22 @@
   background-color: var(--color-rose-50);
   min-height: 100vh;
 
+  @media screen and (max-width: 900px) {
+    display: flex;
+    flex-direction: column;
+  }
+
+  @media screen and (max-width: 768px) {
+    padding: var(--spacing-300);
+  }
+
   .menu {
     flex-grow: 2;
     background-color: var(--color-rose-50);
+
+    @media screen and (max-width: 900px) {
+      flex-grow: 1;
+    }
   }
 
   .cart {
@@ -20,5 +33,14 @@
     position: sticky;
     top: var(--spacing-500);
     border-radius: 12px;
+
+    @media screen and (max-width: 900px) {
+      flex-grow: 1;
+      width: 100%;
+    }
+
+    @media screen and (max-width: 768px) {
+      min-width: 0px;
+    }
   }
 }
