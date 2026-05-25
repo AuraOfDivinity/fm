@@ -1,0 +1,48 @@
+.thumbnailCard {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding-block: var(--spacing-200);
+  border-bottom: 1px solid var(--color-rose-100);
+
+  .thumbnailCard__content {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    gap: var(--spacing-200);
+
+    .thumbnailCard__image {
+      border-radius: 4px;
+    }
+
+    .thumbnailCard__pricingSummary {
+      display: flex;
+      flex-direction: column;
+      gap: var(--spacing-100);
+      .thumbnailCard__title {
+        color: var(--color-rose-900);
+      }
+
+      .thumbnailCard__unitDetailsWrapper {
+        display: flex;
+        flex-direction: row;
+        gap: var(--spacing-100);
+        justify-content: start;
+
+        .thumbnailCard__quantity {
+          color: var(--color-red);
+        }
+
+        .thumbnailCard__unitPrice {
+          color: var(--color-rose-500);
+        }
+      }
+    }
+  }
+
+  .thumbnailCard__total {
+    color: var(--color-rose-900);
+  }
+}

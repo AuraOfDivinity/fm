@@ -1,0 +1,26 @@
+.modal__wrapper {
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.5);
+  position: fixed;
+  top: 0;
+  left: 0;
+
+  .modal__content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    min-width: 600px;
+    background-color: var(--color-white);
+    min-height: 300px;
+    border-radius: 12px;
+    padding: var(--spacing-500);
+
+    @media screen and (max-width: 768px) {
+      min-width: 100%;
+      padding: var(--spacing-200);
+      max-height: 60%vh;
+    }
+  }
+}

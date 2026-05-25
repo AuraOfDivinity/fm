@@ -29,10 +29,10 @@ const CartItem = ({ name, quantity, unitPrice, id }: TCartItemProps) => {
           <p
             className={`${styles.cartItem__itemQuantity} text-preset-4-regular`}
           >
-            {quantity}
+            {quantity}x
           </p>
           <p className={`${styles.cartItem__unitPrice} text-preset-4-regular`}>
-            ${`${unitPrice.toFixed(2)}`}
+            @${`${unitPrice.toFixed(2)}`}
           </p>
           <p className={`${styles.cartItem__totalPrice} text-preset-4-regular`}>
             ${`${(unitPrice * quantity).toFixed(2)}`}

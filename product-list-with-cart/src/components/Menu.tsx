@@ -1,21 +1,7 @@
 import styles from "./Menu.module.css";
 import ProductCard from "./ProductCard.tsx";
 import { useCartState } from "../hooks/useCartState.ts";
-
-const imageModules = import.meta.glob("../assets/images/*", {
-  eager: true,
-  import: "default",
-}) as Record<string, string>;
-
-const resolveImageUrl = (imagePath: string) => {
-  const fileName = imagePath.split("/").pop();
-
-  if (!fileName) {
-    return "";
-  }
-
-  return imageModules[`../assets/images/${fileName}`] ?? "";
-};
+import { resolveImageUrl } from "../utils/resolveImageUrl.ts";
 
 const Menu = () => {
   const state = useCartState();
