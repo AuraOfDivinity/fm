@@ -1,2 +1,89 @@
+@import url("https://fonts.googleapis.com/css2?family=Public+Sans:ital,wght@0,100..900;1,100..900&display=swap");
+
 :root {
+  --color-beige-500: #98908b;
+  --color-beige-100: #f8f4f0;
+
+  --color-gray-900: #201f24;
+  --color-gray-500: #696868;
+  --color-gray-300: #b3b3b3;
+  --color-gray-100: #f2f2f2;
+
+  --color-green: #277c78;
+  --color-yellow: #f2cdac;
+  --color-cyan: #82c9d7;
+  --color-navy: #626070;
+  --color-red: #c94736;
+  --color-purple: #826cb0;
+  --color-white: #ffffff;
+
+  --color-purple-light: #af81ba;
+  --color-turquoise: #597c7c;
+  --color-brown: #93674f;
+  --color-magenta: #934f6f;
+  --color-blue: #3f82b2;
+  --color-navy-grey: #97a0ac;
+  --color-navy-green: #7f9161;
+  --color-gold: #cab361;
+  --color-orange: #be6c49;
+
+  --spacing-50: 4px;
+  --spacing-100: 8px;
+  --spacing-150: 12px;
+  --spacing-200: 16px;
+  --spacing-250: 20px;
+  --spacing-300: 24px;
+  --spacing-400: 32px;
+  --spacing-500: 40px;
+
+  --font-main: "Public Sans", sans-serif;
+}
+
+.text-preset-1 {
+  font-size: 32px;
+  line-height: 1.2;
+  letter-spacing: 0px;
+  font-weight: 700;
+}
+
+.text-preset-2 {
+  font-size: 20px;
+  line-height: 1.2;
+  letter-spacing: 0px;
+  font-weight: 700;
+}
+
+.text-preset-3 {
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0px;
+  font-weight: 700;
+}
+
+.text-preset-4-regulaar {
+  font-size: 14px;
+  line-height: 1.5;
+  letter-spacing: 0px;
+  font-weight: 400;
+}
+
+.text-preset-4-bold {
+  font-size: 14px;
+  line-height: 1.5;
+  letter-spacing: 0px;
+  font-weight: 700;
+}
+
+.text-preset-5-regulaar {
+  font-size: 12px;
+  line-height: 1.5;
+  letter-spacing: 0px;
+  font-weight: 400;
+}
+
+.text-preset-5-bold {
+  font-size: 12px;
+  line-height: 1.5;
+  letter-spacing: 0px;
+  font-weight: 700;
 }
