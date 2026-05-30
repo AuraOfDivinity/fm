@@ -8,3 +8,8 @@
   border-radius: var(--spacing-100);
   background-color: var(--color-grey-900);
 }
+
+.button__wrapper:hover {
+  background-color: var(--color-grey-500);
+  transition: 320ms;
+}

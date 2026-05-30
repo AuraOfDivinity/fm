@@ -2,7 +2,7 @@
   height: 100vh;
   width: 100vw;
   display: grid;
-  grid-template-columns: 4fr 7fr;
+  grid-template-columns: 5fr 7fr;
   background: var(--color-beige-100);
 
   @media screen and (min-width: 1520px) {
@@ -49,5 +49,9 @@
   }
 
   .authIndex__content {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
 }

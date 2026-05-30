@@ -1,0 +1,34 @@
+.login__wrapper {
+  display: flex;
+  padding: var(--spacing-400);
+  width: 560px;
+  align-self: stretch;
+  flex-direction: column;
+  background-color: var(--color-white);
+  border-radius: var(--spacing-150);
+  gap: var(--spacing-400);
+
+  .login__header {
+    color: var(--color-grey-900);
+  }
+
+  .login__formFieldWrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: var(--spacing-200);
+    align-self: stretch;
+  }
+
+  .login__footer {
+    display: flex;
+    justify-content: center;
+    color: var(--color-grey-500);
+    gap: var(--spacing-50);
+
+    .register__link {
+      color: var(--color-grey-900);
+      text-decoration: underline;
+    }
+  }
+}

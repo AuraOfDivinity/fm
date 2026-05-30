@@ -1,0 +1,28 @@
+@keyframes slide-up-fade-in {
+  from {
+    transform: translateY(var(--translate-y-distance, 20px));
+    opacity: 0;
+  }
+
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.animate-slide-up {
+  animation-name: slide-up-fade-in;
+  animation-duration: var(--animation-duration, 320ms);
+  animation-delay: var(--slide-up-delay, 0ms);
+  animation-timing-function: var(
+    --slide-up-ease,
+    cubic-bezier(0.22, 1, 0.36, 1)
+  );
+  animation-fill-mode: both;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .animate-slide-up {
+    animation: none;
+  }
+}
