@@ -43,6 +43,7 @@
 
       .authIndex__subHeading {
         color: var(--color-white);
+        letter-spacing: -0.5px;
       }
     }
   }
