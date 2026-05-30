@@ -1,0 +1,30 @@
+.input__wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-50);
+  align-items: flex-start;
+  width: 100%;
+
+  .input__label {
+    color: var(--color-grey-500);
+  }
+
+  .input__element {
+    width: 100%;
+    border: 1px solid var(--color-beige-500);
+    border-radius: var(--spacing-100);
+    padding: var(--spacing-150) var(--spacing-250);
+    color: var(--color-grey-900);
+  }
+
+  .input__element:focus {
+    outline: none;
+    border: 1px solid var(--color-grey-900);
+    transition: 700ms;
+  }
+
+  .input__helper {
+    align-self: flex-end;
+    color: var(--color-grey-500);
+  }
+}

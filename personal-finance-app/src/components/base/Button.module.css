@@ -1,0 +1,10 @@
+.button__wrapper {
+  color: var(--color-white);
+  width: 100%;
+  padding: var(--spacing-200);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: var(--spacing-100);
+  background-color: var(--color-grey-900);
+}
