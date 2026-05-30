@@ -2,13 +2,51 @@
   height: 100vh;
   width: 100vw;
   display: grid;
-  grid-template-columns: 5fr 7fr;
+  grid-template-columns: 4fr 7fr;
+  background: var(--color-beige-100);
+
+  @media screen and (min-width: 1520px) {
+    grid-template-columns: 5fr 7fr;
+  }
 
   .authIndex__image {
-    background-color: salmon;
+    height: 100vh;
+    padding: var(--spacing-250);
+    overflow: hidden;
+    position: relative;
+
+    .authIndex__main {
+      height: 100%;
+      width: 100%;
+      object-fit: cover;
+      border-radius: 12px;
+      object-position: 50% 60%;
+    }
+
+    .authIndex__logo {
+      position: absolute;
+      inset-block-start: var(--spacing-750);
+      inset-inline-start: var(--spacing-750);
+    }
+
+    .authIndex__text {
+      position: absolute;
+      inset-block-end: var(--spacing-750);
+      inset-inline-start: var(--spacing-750);
+      display: flex;
+      flex-direction: column;
+      gap: var(--spacing-300);
+      max-width: calc(100% - (var(--spacing-750) * 2));
+      .authIndex__heading {
+        color: var(--color-white);
+      }
+
+      .authIndex__subHeading {
+        color: var(--color-white);
+      }
+    }
   }
 
   .authIndex__content {
-    background-color: lightblue;
   }
 }

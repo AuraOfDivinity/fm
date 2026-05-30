@@ -114,6 +114,7 @@ ol {
   --spacing-300: 24px;
   --spacing-400: 32px;
   --spacing-500: 40px;
+  --spacing-750: 60px;
 
   --font-main: "Public Sans", sans-serif;
 }
@@ -123,6 +124,7 @@ ol {
   line-height: 1.2;
   letter-spacing: 0px;
   font-weight: 700;
+  font-family: var(--font-main);
 }
 
 .text-preset-2 {
@@ -130,6 +132,7 @@ ol {
   line-height: 1.2;
   letter-spacing: 0px;
   font-weight: 700;
+  font-family: var(--font-main);
 }
 
 .text-preset-3 {
@@ -137,13 +140,15 @@ ol {
   line-height: 1.5;
   letter-spacing: 0px;
   font-weight: 700;
+  font-family: var(--font-main);
 }
 
-.text-preset-4-regulaar {
+.text-preset-4-regular {
   font-size: 14px;
   line-height: 1.5;
   letter-spacing: 0px;
   font-weight: 400;
+  font-family: var(--font-main);
 }
 
 .text-preset-4-bold {
@@ -151,6 +156,7 @@ ol {
   line-height: 1.5;
   letter-spacing: 0px;
   font-weight: 700;
+  font-family: var(--font-main);
 }
 
 .text-preset-5-regulaar {
@@ -158,6 +164,7 @@ ol {
   line-height: 1.5;
   letter-spacing: 0px;
   font-weight: 400;
+  font-family: var(--font-main);
 }
 
 .text-preset-5-bold {
@@ -165,4 +172,5 @@ ol {
   line-height: 1.5;
   letter-spacing: 0px;
   font-weight: 700;
+  font-family: var(--font-main);
 }
