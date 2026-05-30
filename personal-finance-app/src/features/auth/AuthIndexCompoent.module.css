@@ -1,0 +1,14 @@
+.authIndex__wrapper {
+  height: 100vh;
+  width: 100vw;
+  display: grid;
+  grid-template-columns: 5fr 7fr;
+
+  .authIndex__image {
+    background-color: salmon;
+  }
+
+  .authIndex__content {
+    background-color: lightblue;
+  }
+}
