@@ -18,9 +18,10 @@ const Input = ({
   helperStyles,
   labelStyles,
   inputStyles,
+  ...rest
 }: TInputProps) => {
   return (
-    <div className={clsx(styles.input__wrapper)}>
+    <div className={clsx(styles.input__wrapper)} {...rest}>
       {labelText && (
         <div
           className={clsx(

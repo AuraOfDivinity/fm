@@ -6,7 +6,7 @@ type TButtonProps = ComponentPropsWithoutRef<"button"> & {
   buttonStyles?: string;
 };
 
-const Button = ({ buttonStyles, children }: TButtonProps) => {
+const Button = ({ buttonStyles, children, ...rest }: TButtonProps) => {
   return (
     <button
       className={clsx(
@@ -14,6 +14,7 @@ const Button = ({ buttonStyles, children }: TButtonProps) => {
         "text-preset-4-bold",
         buttonStyles,
       )}
+      {...rest}
     >
       {children}
     </button>
