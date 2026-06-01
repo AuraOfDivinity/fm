@@ -7,7 +7,7 @@ import clsx from "clsx";
 const AuthIndexComponent = () => {
   return (
     <>
-      <div className={styles.authIndex__headerBar}>
+      <div className={clsx(styles.authIndex__headerBar, "animate-slide-down")}>
         <img src={LogoLarge} alt="header-logo" />
       </div>
       <div className={styles.authIndex__wrapper}>
