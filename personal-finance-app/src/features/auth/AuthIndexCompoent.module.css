@@ -9,11 +9,21 @@
     grid-template-columns: 5fr 7fr;
   }
 
+  @media screen and (max-width: 992px) {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
   .authIndex__image {
     height: 100vh;
     padding: var(--spacing-250);
     overflow: hidden;
     position: relative;
+
+    @media screen and (max-width: 992px) {
+      display: none;
+    }
 
     .authIndex__main {
       height: 100%;
@@ -50,6 +60,24 @@
 
   .authIndex__content {
     width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}
+
+.authIndex__headerBar {
+  display: none;
+  position: fixed;
+  inset-block-start: 0;
+  inset-inline-start: 0;
+  width: 100vw;
+  border-end-end-radius: var(--spacing-100);
+  border-end-start-radius: var(--spacing-100);
+  background-color: var(--color-grey-900);
+  height: 70px;
+
+  @media screen and (max-width: 992px) {
     display: flex;
     align-items: center;
     justify-content: center;

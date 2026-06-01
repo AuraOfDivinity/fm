@@ -7,9 +7,13 @@
   justify-content: center;
   border-radius: var(--spacing-100);
   background-color: var(--color-grey-900);
+  outline: none;
+  border: 1px solid var(--color-grey-900);
 }
 
 .button__wrapper:hover {
   background-color: var(--color-grey-500);
   transition: 320ms;
+  outline: none;
+  border: 1px solid var(--color-grey-500);
 }
