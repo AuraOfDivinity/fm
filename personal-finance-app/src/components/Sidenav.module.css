@@ -18,6 +18,10 @@
   }
 
   .sideNav__menuContent {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: var(--spacing-50);
     flex: 1;
   }
 

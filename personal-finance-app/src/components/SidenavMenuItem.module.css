@@ -1,0 +1,11 @@
+.navItem__wrapper {
+  padding: var(--spacing-200) var(--spacing-400);
+  gap: var(--spacing-200);
+  align-self: stretch;
+  display: flex;
+  align-items: center;
+
+  .navItem__text {
+    color: var(--color-grey-300);
+  }
+}
