@@ -1,0 +1,30 @@
+.sideNav__wrapper {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  width: 88px;
+  border-start-end-radius: var(--spacing-200);
+  border-end-end-radius: var(--spacing-200);
+  background-color: var(--color-grey-900);
+  padding-block-end: var(--spacing-300);
+  gap: var(--spacing-300);
+  transition: width 400ms cubic-bezier(0.4, 0, 0.2, 1);
+
+  .sideNav__logo {
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    padding: var(--spacing-500) var(--spacing-400);
+  }
+
+  .sideNav__menuContent {
+    flex: 1;
+  }
+
+  .sideNav__footer {
+  }
+
+  &.isExpanded {
+    width: 300px;
+  }
+}

@@ -38,7 +38,7 @@
 
 .animate-slide-down {
   animation-name: slide-down;
-  animation-duration: var(--animation-duration, 320ms);
+  animation-duration: var(--animation-duration, 640ms);
   animation-delay: var(--slide-up-delay, 0ms);
   animation-timing-function: var(
     --slide-up-ease,
