@@ -13,6 +13,7 @@ type TSidenavMenuItemProps = {
   iconName: string;
 };
 
+// resolve the icon image url
 const resolveIconImageUrl = (iconName: string): string => {
   switch (iconName) {
     case "overview":
