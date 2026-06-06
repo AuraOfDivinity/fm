@@ -1,6 +1,7 @@
 import clsx from "clsx";
 import styles from "./Overview.module.css";
 import OverviewSummaryCard from "../components/OverviewSummaryCard";
+import Card from "../../../shared/ui/Card/Card";
 
 const Overview = () => {
   return (
@@ -19,7 +20,28 @@ const Overview = () => {
           content="$1200.00"
         />
       </div>
-      <div className={styles.overview__content}></div>
+      <div className={styles.overview__content}>
+        <div className={styles.overview__pots}>
+          <Card displayTitleSection title="Pots">
+            content
+          </Card>
+        </div>
+        <div className={styles.overview__budgets}>
+          <Card displayTitleSection title="Pots">
+            content
+          </Card>
+        </div>
+        <div className={styles.overview__transactions}>
+          <Card displayTitleSection title="Pots">
+            content
+          </Card>
+        </div>
+        <div className={styles.overview__bills}>
+          <Card displayTitleSection title="Pots">
+            content
+          </Card>
+        </div>
+      </div>
     </section>
   );
 };
