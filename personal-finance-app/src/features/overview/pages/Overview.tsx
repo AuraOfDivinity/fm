@@ -22,24 +22,16 @@ const Overview = () => {
       </div>
       <div className={styles.overview__content}>
         <div className={styles.overview__pots}>
-          <Card displayTitleSection title="Pots">
-            content
-          </Card>
+          <Card displayTitleSection title="Pots"></Card>
         </div>
         <div className={styles.overview__budgets}>
-          <Card displayTitleSection title="Pots">
-            content
-          </Card>
+          <Card displayTitleSection title="Budgets"></Card>
         </div>
         <div className={styles.overview__transactions}>
-          <Card displayTitleSection title="Pots">
-            content
-          </Card>
+          <Card displayTitleSection title="Transactions"></Card>
         </div>
         <div className={styles.overview__bills}>
-          <Card displayTitleSection title="Pots">
-            content
-          </Card>
+          <Card displayTitleSection title="Recurring Bills"></Card>
         </div>
       </div>
     </section>

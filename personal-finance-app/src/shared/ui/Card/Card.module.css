@@ -19,6 +19,7 @@
     .card__actionWrapper {
       display: flex;
       gap: var(--spacing-150);
+      align-items: center;
 
       .card__actionText {
         color: var(--color-grey-500);

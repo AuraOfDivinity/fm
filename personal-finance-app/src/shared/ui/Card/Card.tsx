@@ -4,7 +4,7 @@ import clsx from "clsx";
 import IconCaretRight from "../../../assets/icon-caret-right.svg";
 
 type TCardProps = {
-  children: ReactNode;
+  children?: ReactNode;
   displayTitleSection: boolean;
   title?: string;
   actionText?: string;
@@ -32,7 +32,12 @@ const Card = ({
             >
               {actionText}
             </p>
-            <img src={IconCaretRight} alt="more details icon" />
+            <img
+              src={IconCaretRight}
+              alt="more details icon"
+              width={12}
+              height={12}
+            />
           </div>
         </div>
       )}
