@@ -1,9 +1,9 @@
 import styles from "./SidenavMenuItem.module.css";
-import OverviewIcon from "../assets/icon-nav-overview.svg";
-import TransctionIcon from "../assets/icon-nav-transactions.svg";
-import BudgetIcon from "../assets/icon-nav-budgets.svg";
-import PotIcon from "../assets/icon-nav-pots.svg";
-import RecurringBillIcon from "../assets/icon-nav-recurring-bills.svg";
+import OverviewIcon from "../../../assets/icon-nav-overview.svg";
+import TransctionIcon from "../../../assets/icon-nav-transactions.svg";
+import BudgetIcon from "../../../assets/icon-nav-budgets.svg";
+import PotIcon from "../../../assets/icon-nav-pots.svg";
+import RecurringBillIcon from "../../../assets/icon-nav-recurring-bills.svg";
 import clsx from "clsx";
 import { useSidebarStore } from "../store/useSidebarStore";
 
@@ -34,14 +34,14 @@ const resolveIconImageUrl = (iconName: string): string => {
 const SidenavMenuItem = ({ url, text, iconName }: TSidenavMenuItemProps) => {
   const { isExpanded } = useSidebarStore();
   return (
-    <div className={styles.navItem__wrapper}>
+    <a href={url} className={styles.navItem__wrapper}>
       <img src={resolveIconImageUrl(iconName)} alt={`${iconName} nav icon`} />
       {isExpanded && (
         <div className={clsx(styles.navItem__text, "text-preset-3")}>
           {text}
         </div>
       )}
-    </div>
+    </a>
   );
 };
 

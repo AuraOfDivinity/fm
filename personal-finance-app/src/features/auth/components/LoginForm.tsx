@@ -1,7 +1,7 @@
 import clsx from "clsx";
-import Button from "../../components/base/Button";
+import Button from "../../../shared/ui/Button/Button";
 import styles from "./LoginForm.module.css";
-import Input from "../../components/base/Input";
+import Input from "../../../shared/ui/Input/Input";
 import { Link } from "@tanstack/react-router";
 
 const LoginForm = () => {

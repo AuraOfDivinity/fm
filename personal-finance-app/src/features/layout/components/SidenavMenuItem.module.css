@@ -4,6 +4,7 @@
   align-self: stretch;
   display: flex;
   align-items: center;
+  text-decoration: none;
 
   .navItem__text {
     color: var(--color-grey-300);

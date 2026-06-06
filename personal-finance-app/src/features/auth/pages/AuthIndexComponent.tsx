@@ -1,7 +1,7 @@
 import { Outlet } from "@tanstack/react-router";
-import styles from "./AuthIndexCompoent.module.css";
-import AuthSidePanelImage from "../../assets/illustration-authentication.svg";
-import LogoLarge from "../../assets/logo-large.svg";
+import styles from "./AuthIndexComponent.module.css";
+import AuthSidePanelImage from "../../../assets/illustration-authentication.svg";
+import LogoLarge from "../../../assets/logo-large.svg";
 import clsx from "clsx";
 
 const AuthIndexComponent = () => {

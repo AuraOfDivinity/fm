@@ -1,8 +1,8 @@
 import clsx from "clsx";
 import { useSidebarStore } from "../store/useSidebarStore";
-import SideNavLogoLarge from "../assets/logo-large.svg";
-import SideNavLogoSmall from "../assets/logo-small.svg";
-import { menuItems } from "../configs/sidenavMenuItems";
+import SideNavLogoLarge from "../../../assets/logo-large.svg";
+import SideNavLogoSmall from "../../../assets/logo-small.svg";
+import { menuItems } from "../config/sidenavMenuItems";
 import styles from "./Sidenav.module.css";
 import SidenavMenuItem from "./SidenavMenuItem";
 

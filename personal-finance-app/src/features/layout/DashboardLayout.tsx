@@ -1,6 +1,6 @@
 import { Outlet } from "@tanstack/react-router";
 import styles from "./DashboardLayout.module.css";
-import Sidenav from "../../components/Sidenav";
+import Sidenav from "./components/Sidenav";
 
 const DashboardLayout = () => {
   return (
