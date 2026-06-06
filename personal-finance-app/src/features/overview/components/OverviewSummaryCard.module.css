@@ -1,0 +1,16 @@
+.summary__wrapper {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  padding: var(--spacing-300);
+  align-items: flex-start;
+  gap: var(--spacing-150);
+  background-color: var(--color-white);
+  color: var(--color-grey-900);
+  border-radius: var(--spacing-150);
+
+  &.dark {
+    background-color: var(--color-grey-900);
+    color: var(--color-white);
+  }
+}

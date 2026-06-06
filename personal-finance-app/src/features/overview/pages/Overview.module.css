@@ -1,0 +1,23 @@
+.overview__wrapper {
+  display: flex;
+  flex-direction: column;
+  padding: var(--spacing-400) var(--spacing-500);
+  gap: var(--spacing-400);
+  align-items: start;
+  background-color: var(--color-beige-100);
+  width: 100%;
+
+  .overview__title {
+    color: var(--color-grey-900);
+    display: flex;
+    flex: 1;
+    justify-content: flex-start;
+  }
+
+  .overview__summary {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    width: 100%;
+    column-gap: var(--spacing-300);
+  }
+}
