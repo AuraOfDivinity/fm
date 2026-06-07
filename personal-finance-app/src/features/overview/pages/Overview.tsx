@@ -2,6 +2,8 @@ import clsx from "clsx";
 import styles from "./Overview.module.css";
 import OverviewSummaryCard from "../components/OverviewSummaryCard";
 import Card from "../../../shared/ui/Card/Card";
+import OverviewPots from "../components/OverviewPots";
+import type { CSSProperties } from "react";
 
 const Overview = () => {
   return (
@@ -21,16 +23,47 @@ const Overview = () => {
         />
       </div>
       <div className={styles.overview__content}>
-        <div className={styles.overview__pots}>
-          <Card displayTitleSection title="Pots"></Card>
+        <div
+          className={clsx(styles.overview__pots, "animate-slide-up")}
+          style={
+            {
+              "--animation-duration": "700ms",
+            } as CSSProperties
+          }
+        >
+          <OverviewPots />
         </div>
-        <div className={styles.overview__budgets}>
+        <div
+          className={clsx(styles.overview__budgets, "animate-slide-up")}
+          style={
+            {
+              "--animation-duration": "700ms",
+              "--slide-up-delay": "200ms",
+            } as CSSProperties
+          }
+        >
           <Card displayTitleSection title="Budgets"></Card>
         </div>
-        <div className={styles.overview__transactions}>
+        <div
+          className={clsx(styles.overview__transactions, "animate-slide-up")}
+          style={
+            {
+              "--animation-duration": "700ms",
+              "--slide-up-delay": "400ms",
+            } as CSSProperties
+          }
+        >
           <Card displayTitleSection title="Transactions"></Card>
         </div>
-        <div className={styles.overview__bills}>
+        <div
+          className={clsx(styles.overview__bills, "animate-slide-up")}
+          style={
+            {
+              "--animation-duration": "700ms",
+              "--slide-up-delay": "500ms",
+            } as CSSProperties
+          }
+        >
           <Card displayTitleSection title="Recurring Bills"></Card>
         </div>
       </div>
