@@ -49,7 +49,7 @@ const Overview = () => {
           style={
             {
               "--animation-duration": "700ms",
-              "--slide-up-delay": "400ms",
+              "--slide-up-delay": "300ms",
             } as CSSProperties
           }
         >
@@ -60,7 +60,7 @@ const Overview = () => {
           style={
             {
               "--animation-duration": "700ms",
-              "--slide-up-delay": "500ms",
+              "--slide-up-delay": "400ms",
             } as CSSProperties
           }
         >
