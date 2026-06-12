@@ -5,6 +5,7 @@ import Card from "../../../shared/ui/Card/Card";
 import OverviewPots from "../components/OverviewPots";
 import type { CSSProperties } from "react";
 import OverviewTransactions from "../components/OverviewTransactions";
+import OverviewBills from "../components/OverviewBills";
 
 const Overview = () => {
   return (
@@ -67,7 +68,9 @@ const Overview = () => {
             } as CSSProperties
           }
         >
-          <Card displayTitleSection title="Recurring Bills"></Card>
+          <Card displayTitleSection title="Recurring Bills">
+            <OverviewBills />
+          </Card>
         </div>
       </div>
     </section>
