@@ -1,0 +1,42 @@
+.transactions__wrapper {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-500);
+
+  .transaction__item {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+    .transaction__profile {
+      display: flex;
+      flex-direction: row;
+      gap: var(--spacing-200);
+      align-items: center;
+
+      .transaction__profileIcon {
+        width: 40px;
+        height: 40px;
+        border-radius: 40px;
+      }
+      .transaction__profileName {
+        color: var(--color-grey-900);
+      }
+    }
+    .transaction__value {
+      display: flex;
+      flex-direction: column;
+      gap: var(--spacing-100);
+
+      .transaction__creditText {
+        color: var(--color-grey-900);
+      }
+
+      .transaction__debitText {
+        color: var(--color-green);
+      }
+    }
+  }
+}

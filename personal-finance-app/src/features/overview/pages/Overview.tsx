@@ -4,6 +4,7 @@ import OverviewSummaryCard from "../components/OverviewSummaryCard";
 import Card from "../../../shared/ui/Card/Card";
 import OverviewPots from "../components/OverviewPots";
 import type { CSSProperties } from "react";
+import OverviewTransactions from "../components/OverviewTransactions";
 
 const Overview = () => {
   return (
@@ -53,7 +54,9 @@ const Overview = () => {
             } as CSSProperties
           }
         >
-          <Card displayTitleSection title="Transactions"></Card>
+          <Card displayTitleSection title="Transactions">
+            <OverviewTransactions />
+          </Card>
         </div>
         <div
           className={clsx(styles.overview__bills, "animate-slide-up")}
