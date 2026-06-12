@@ -1,0 +1,28 @@
+.item__wrapper {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-150);
+  justify-content: space-between;
+
+  .item__name {
+    color: var(--color-grey-500);
+  }
+
+  .item__amount {
+    color: var(--color-grey-900);
+  }
+}
+
+.item__wrapper.item__border-green {
+  color: var(--color-green);
+}
+
+.item__wrapper.item__border-cyan {
+  color: var(--color-cyan);
+}
+
+.item__wrapper.item__border-yellow {
+  color: var(--color-yellow);
+}
